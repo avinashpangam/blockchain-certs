@@ -13,7 +13,7 @@ class Certificate extends Component {
   render() {
     return (
       <div className="w-100 pc ">
-        <div id="printcertificate" className="w-75 cert">
+        <div id="printcertificate" className="w-75  cert">
           <div id="fname">
             <span>{this.props.sname}</span>
           </div>
