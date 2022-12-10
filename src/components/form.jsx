@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Form, Button } from "react-bootstrap";
-import b1 from "../b3.jpg";
+import b1 from "../334.jpg";
 class Forms extends Component {
   canBeSubmitted() {
     const { fname, lname, course, email } = this.state;
@@ -46,11 +46,11 @@ class Forms extends Component {
             fontFamily: "Montserrat",
             fontWeight: "bold",
             fontSize: "60px",
-            color: "#66ffe7"
+            color: "black"
           }}
           className="mb-5 pt-3"
         >
-          Create certificates on Blockchain
+          Create GradeCard on Blockchain
         </h1>
         <div
           style={{ marginBottom: "117px", background: "rgba(255,255,255,0.5)" }}
@@ -63,7 +63,7 @@ class Forms extends Component {
             }}
             className="mb-2"
           >
-            Enter the Certificate details
+            Enter the details
           </h2>
           <Form onSubmit={this.addcertificate}>
             <Form.Group>
@@ -86,11 +86,11 @@ class Forms extends Component {
             </Form.Group>
             <Form.Group>
               <Form.Control
-                type="email"
+                type="text"
                 name="email"
                 value={this.state.email}
                 onChange={this.handleChange}
-                placeholder="Email@email.com"
+                placeholder="Grade"
               />
             </Form.Group>
             <Form.Group>
@@ -99,7 +99,7 @@ class Forms extends Component {
                 name="course"
                 value={this.state.course}
                 onChange={this.handleChange}
-                placeholder="Course name"
+                placeholder="Department name"
               />
             </Form.Group>
             <Button
@@ -108,7 +108,7 @@ class Forms extends Component {
               variant="primary"
               type="submit"
             >
-              Add certificate
+              Add GradeCard
             </Button>
           </Form>
         </div>
