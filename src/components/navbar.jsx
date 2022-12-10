@@ -2,13 +2,14 @@ import React, { Component } from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../nav.css";
+import im from "../334.jpg";
 class Navhead extends Component {
   state = {};
   render() {
     return (
-      <Navbar className="bar" bg="dark" variant="dark" expand="lg">
+      <Navbar className="bar" bg="light" variant="light" expand="lg">
         <Navbar.Brand mb={0} href="#home">
-          {/* DigitalBlock */}
+          DigitalBlock
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

@@ -44,8 +44,8 @@ class App extends Component {
   add = data => {
     //const certificates = new this.state.web3.eth.Contract(abi, address);
     //console.log(data.fname, data.course, data.email);
-    var name = data.fname + " " + data.lname;
-    certcontract.methods.addcert(name, data.course, data.email).send(
+    var name = data.fname;
+    certcontract.methods.addcert(name, data.course, data.grade,data.course1,data.course2,data.course3,data.course4,data.lab1,data.lab2).send(
       {
         from: this.state.account,
         gas: 500000
@@ -53,13 +53,13 @@ class App extends Component {
       (error, result) => {
         if (error) console.log("error " + error);
         else {
-          this.setState({ name: data.fname + " " + data.lname });
+          this.setState({ name: data.fname});
           this.setState({ course: data.course + " " + "course" });
           this.setState({ txh: result });
           console.log(result);
           certcontract.methods
             .getid()
-            .call({ from: this.state.account }, (error, result) => {
+            .CALL({ from: this.state.account }, (error, result) => {
               this.setState({ id: result });
               if (!error) console.log(result);
               else console.log(error);

@@ -1,5 +1,6 @@
 .cert {
   height: 85vh;
+  /* width:60%; */
   background: url("cert.png") no-repeat;
   background-size: cover;
   margin-left: 150px;
